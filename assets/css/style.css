@@ -1510,6 +1510,10 @@ textarea.form-control {
     object-fit: cover;
 }
 
+.before-after .img-focus-upper {
+    object-position: center center !important;
+}
+
 .before-after-after {
     clip-path: inset(0 0 0 var(--comparison-position, 50%));
 }
@@ -1699,6 +1703,147 @@ textarea.form-control {
 .feature-strip-item p {
     margin: 0;
     font-size: 0.82rem;
+}
+
+/* ========================================
+   Equal Height Components
+======================================== */
+.cards-grid,
+.gallery-grid,
+.feature-strip,
+.swatch-groups {
+    align-items: stretch;
+}
+
+.cards-grid > *,
+.gallery-grid > *,
+.feature-strip > *,
+.swatch-groups > * {
+    min-width: 0;
+    height: 100%;
+}
+
+.card-body > p {
+    flex-grow: 1;
+}
+
+.testimonial-card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.testimonial-card > p {
+    flex: 0 1 auto;
+    margin-bottom: auto;
+    padding-bottom: 28px;
+}
+
+.testimonial-card > small {
+    min-height: 28px;
+}
+
+.cards-grid > article:not(.card),
+.feature-strip-item,
+.swatch-card,
+.process-step {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.cards-grid > article:not(.card) > p:last-child,
+.feature-strip-item > p:last-child,
+.process-step > p:last-child {
+    margin-bottom: 0;
+}
+
+.process-step h3 {
+    min-height: 2.3em;
+}
+
+[data-page="services"] .surface-section .split {
+    align-items: stretch;
+}
+
+[data-page="services"] .surface-section .split > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+}
+
+[data-page="services"] .surface-section .split > div > img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin-top: auto;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+/* ========================================
+   Image Aspect Ratios
+======================================== */
+.media-4x3 {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.media-16x9 {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.media-4x5 {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+}
+
+.media-4x3 > img,
+.media-16x9 > img,
+.media-4x5 > img,
+img.media-4x3,
+img.media-16x9,
+img.media-4x5 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ========================================
+   Image Focal Position
+======================================== */
+.img-focus-center {
+    object-position: center center !important;
+}
+
+.img-focus-top {
+    object-position: center top !important;
+}
+
+.img-focus-upper {
+    object-position: center 22% !important;
+}
+
+.img-focus-left {
+    object-position: left center !important;
+}
+
+.img-focus-right {
+    object-position: right center !important;
+}
+
+.quote-layout {
+    align-items: stretch;
+}
+
+.quote-visual > img {
+    min-height: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
