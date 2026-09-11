@@ -1,0 +1,61 @@
+/* ========================================
+   INTENTIONAL DARK THEME
+======================================== */
+[data-theme="dark"] {
+    --primary: #d7deed;
+    --primary-dark: #101722;
+    --accent: #c96f4a;
+    --accent-soft: #4a3029;
+    --background: #101722;
+    --surface: #17202d;
+    --surface-alt: #202b3a;
+    --text-primary: #f5f3ef;
+    --text-secondary: #aeb5bf;
+    --border: #303a48;
+    --footer: #0b111b;
+    --shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+[data-theme="dark"] .hero-media::after {
+    background: linear-gradient(90deg, rgba(10, 16, 28, 0.95), rgba(10, 16, 28, 0.18));
+}
+
+[data-theme="dark"] .btn-primary {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .brand-mark {
+    background: transparent;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .process-step::before {
+    color: #ffffff;
+    background: var(--accent);
+    border: 3px solid var(--primary-dark);
+}
+
+[data-theme="dark"] .process-step {
+    border-top-color: var(--border);
+}
+
+[data-theme="dark"] .back-to-top {
+    color: #ffffff;
+    background: var(--accent);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .swatches {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: #7f8d86;
+}
+
+[data-theme="dark"] .map-frame {
+    filter: brightness(0.82) contrast(1.08);
+}

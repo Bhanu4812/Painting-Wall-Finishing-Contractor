@@ -1,0 +1,58 @@
+/* ========================================
+   RTL SUPPORT
+======================================== */
+[dir="rtl"] body {
+    text-align: right;
+}
+
+[dir="rtl"] .site-nav {
+    margin-right: auto;
+    margin-left: 0;
+    direction: rtl;
+}
+
+[dir="rtl"] .header-actions {
+    margin-right: 0;
+    margin-left: auto;
+    direction: ltr;
+}
+
+[dir="rtl"] .dropdown-menu {
+    right: 0;
+    left: auto;
+    text-align: right;
+}
+
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .btn,
+[dir="rtl"] .text-link,
+[dir="rtl"] .feature-list li,
+[dir="rtl"] .check-list li,
+[dir="rtl"] .contact-list li {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .process-step::before {
+    right: 0;
+    left: auto;
+}
+
+[dir="rtl"] .accordion-button {
+    text-align: right;
+}
+
+[dir="rtl"] .back-to-top {
+    right: auto;
+    left: 22px;
+}
+
+[dir="rtl"] .nav-link::after,
+[dir="rtl"] .dropdown-toggle::before {
+    transform-origin: right center;
+}
+
+[dir="rtl"] .dropdown-toggle i,
+[dir="rtl"] .text-link i,
+[dir="rtl"] .breadcrumb i {
+    transform: scaleX(-1);
+}
