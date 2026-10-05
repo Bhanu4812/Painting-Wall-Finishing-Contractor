@@ -53,7 +53,7 @@
 }
 
 [data-theme="dark"] .form-control::placeholder {
-    color: #7f8d86;
+    color: var(--text-secondary);
 }
 
 [data-theme="dark"] .map-frame {

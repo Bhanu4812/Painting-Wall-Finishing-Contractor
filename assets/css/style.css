@@ -159,6 +159,11 @@ textarea {
     opacity: 0.75;
 }
 
+.dark-section .estimate-card,
+.dark-section .estimate-card h3 {
+    color: var(--text-primary);
+}
+
 .eyebrow {
     display: inline-flex;
     align-items: center;
@@ -598,21 +603,40 @@ textarea {
 }
 
 [data-page="about"] .inner-hero::before {
-    background-image: url("../images/about/surface-preparation.png");
+    background-image: url("../images/about/team-at-work.webp");
 }
 
 [data-page="services"] .inner-hero::before {
-    background-image: url("../images/home/interior-painting.png");
+    background-image: url("../images/services/service-tools.webp");
 }
 
 [data-page="projects"] .inner-hero::before {
     width: 58%;
-    background-image: url("../images/projects/exterior-painting.png");
+    background-image: url("../images/projects/portfolio-hero.webp");
 }
 
-[data-page="pricing"] .inner-hero::before,
+[data-page="pricing"] .inner-hero::before {
+    background-image: url("../images/pricing/estimate-planning.webp");
+}
+
 [data-page="contact"] .inner-hero::before {
-    background-image: url("../images/contact/site-inspection.png");
+    background-image: url("../images/contact/project-conversation.webp");
+}
+
+[data-service="interior"] .inner-hero::before {
+    background-image: url("../images/services/interior-hero.webp");
+}
+
+[data-service="exterior"] .inner-hero::before {
+    background-image: url("../images/services/exterior-hero.webp");
+}
+
+[data-service="texture"] .inner-hero::before {
+    background-image: url("../images/services/texture-hero.webp");
+}
+
+[data-service="waterproofing"] .inner-hero::before {
+    background-image: url("../images/services/waterproofing-hero.webp");
 }
 
 .inner-hero-content {
@@ -1032,6 +1056,37 @@ input[type="file"].form-control {
     cursor: pointer;
 }
 
+.form-control::placeholder {
+    color: var(--text-secondary);
+    opacity: 1;
+}
+
+.select-field {
+    position: relative;
+}
+
+.select-field .form-select {
+    appearance: none;
+    padding-inline-end: 44px;
+}
+
+.select-field > i {
+    position: absolute;
+    top: 50%;
+    inset-inline-end: 16px;
+    transform: translateY(-50%);
+    color: var(--text-primary);
+    pointer-events: none;
+}
+
+input[type="date"].form-control {
+    color-scheme: light;
+}
+
+[data-theme="dark"] input[type="date"].form-control {
+    color-scheme: dark;
+}
+
 input[type="file"]::file-selector-button {
     min-height: 46px;
     margin: 0 16px 0 0;
@@ -1121,6 +1176,19 @@ textarea.form-control {
     font-weight: 800;
 }
 
+.accordion-button {
+    gap: 16px;
+}
+
+.accordion-button i {
+    display: grid;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    place-items: center;
+}
+
 .accordion-content {
     display: none;
     padding: 0 18px 18px;
@@ -1163,6 +1231,24 @@ textarea.form-control {
 
 .site-footer .brand {
     color: #ffffff;
+}
+
+.footer-main > div {
+    min-width: 0;
+}
+
+.footer-links {
+    overflow-wrap: anywhere;
+}
+
+.footer-links a[href^="mailto:"] {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer-links a[href^="mailto:"] i {
+    flex-shrink: 0;
 }
 
 .site-footer .brand small,
@@ -1586,6 +1672,27 @@ textarea.form-control {
 
 [data-page="consultation"] .hero {
     min-height: 430px;
+}
+
+[data-page="consultation"] .hero .btn-accent,
+[data-page="consultation"] .hero .btn-accent:hover,
+[data-page="consultation"] .hero .btn-accent:focus-visible {
+    color: #ffffff;
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.process-grid.five-steps {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+[data-page="consultation"] .process-step {
+    text-align: center;
+}
+
+[data-page="consultation"] .process-step::before {
+    right: auto;
+    left: calc(50% - 21px);
 }
 
 .editorial-hero-grid {

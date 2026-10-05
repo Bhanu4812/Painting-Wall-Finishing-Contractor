@@ -288,9 +288,9 @@ function buildSiteChrome(assetPrefix, pagePrefix, currentPage) {
                                 <ul class="dropdown-menu">
                                     <li><a${selected("services.html")} href="${pagePrefix}services.html">All Services</a></li>
                                     <li><a${selected("service-details.html")} href="${pagePrefix}service-details.html">Interior Painting</a></li>
-                                    <li><a href="${pagePrefix}service-details.html#exterior">Exterior Painting</a></li>
-                                    <li><a href="${pagePrefix}service-details.html#texture">Texture Finishes</a></li>
-                                    <li><a href="${pagePrefix}service-details.html#waterproofing">Waterproofing</a></li>
+                                    <li><a${selected("exterior-painting.html")} href="${pagePrefix}exterior-painting.html">Exterior Painting</a></li>
+                                    <li><a${selected("texture-finishes.html")} href="${pagePrefix}texture-finishes.html">Texture Finishes</a></li>
+                                    <li><a${selected("waterproofing.html")} href="${pagePrefix}waterproofing.html">Waterproofing</a></li>
                                 </ul>
                             </li>
                             <li><a class="nav-link${active("projects")}" href="${pagePrefix}projects.html">Projects</a></li>
@@ -333,7 +333,7 @@ function buildSiteChrome(assetPrefix, pagePrefix, currentPage) {
                     <div>
                         <h2 class="footer-title">Services</h2>
                         <ul class="footer-links">
-                            <li><a href="${pagePrefix}service-details.html">Interior Painting</a></li><li><a href="${pagePrefix}services.html">Exterior Painting</a></li><li><a href="${pagePrefix}services.html">Texture Finishes</a></li><li><a href="${pagePrefix}services.html">Waterproofing</a></li><li><a href="${pagePrefix}color-consultation.html">Color Consultation</a></li>
+                            <li><a href="${pagePrefix}service-details.html">Interior Painting</a></li><li><a href="${pagePrefix}exterior-painting.html">Exterior Painting</a></li><li><a href="${pagePrefix}texture-finishes.html">Texture Finishes</a></li><li><a href="${pagePrefix}waterproofing.html">Waterproofing</a></li><li><a href="${pagePrefix}color-consultation.html">Color Consultation</a></li>
                         </ul>
                     </div>
                     <div>
