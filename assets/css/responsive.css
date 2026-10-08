@@ -273,6 +273,16 @@
         flex-direction: column;
     }
 
+    .section .button-row,
+    .special-copy .button-row {
+        width: 100%;
+    }
+
+    .section .button-row > .btn,
+    .special-copy .button-row > .btn {
+        flex: 0 1 auto;
+    }
+
     .inner-hero {
         min-height: 320px;
     }

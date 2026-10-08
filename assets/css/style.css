@@ -185,15 +185,25 @@ textarea {
 
 .section-heading {
     max-width: 700px;
-    margin-bottom: 44px;
-}
-
-.section-heading.centered {
     margin-inline: auto;
+    margin-bottom: 44px;
     text-align: center;
 }
 
-.section-heading.centered .eyebrow::before {
+/* Center section titles within both full-width and split-column layouts. */
+.section h2:not(.card h2),
+.quote-band h2 {
+    text-align: center;
+}
+
+.section-heading .eyebrow,
+.section .eyebrow:has(+ h2) {
+    display: flex;
+    justify-content: center;
+}
+
+.section-heading .eyebrow::before,
+.section .eyebrow:has(+ h2)::before {
     display: none;
 }
 
@@ -205,7 +215,9 @@ textarea {
     gap: 10px;
     padding: 11px 22px;
     border: 1px solid transparent;
+    max-width: 100%;
     border-radius: var(--radius-sm);
+    text-align: center;
     font-size: 0.92rem;
     font-weight: 800;
     transition:
@@ -259,6 +271,32 @@ textarea {
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 28px;
+    align-items: center;
+}
+
+.section .button-row,
+.special-copy .button-row {
+    justify-content: center;
+}
+
+/* Standalone section actions follow the same alignment as action groups. */
+.section div > .btn:not(.card .btn):not(.button-row .btn):not(form .btn) {
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 28px;
+}
+
+.section .form-group > .btn {
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.section .split > div > .text-link {
+    display: flex;
+    width: fit-content;
+    margin: 28px auto 0;
 }
 
 /* ========================================
@@ -713,6 +751,56 @@ textarea {
     order: 2;
 }
 
+.service-audiences {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+.service-audiences > div {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.service-audiences > div > .eyebrow {
+    flex-shrink: 0;
+}
+
+.service-audiences > div > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-top: auto;
+}
+
+@media (max-width: 991px) {
+    .service-audiences {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .preparation-split {
+        align-items: stretch;
+    }
+
+    .preparation-split > .image-frame {
+        min-height: 480px;
+    }
+
+    .preparation-split > .image-frame img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        aspect-ratio: auto;
+        object-fit: cover;
+    }
+}
+
 .image-frame {
     position: relative;
     overflow: hidden;
@@ -808,6 +896,7 @@ textarea {
 
 .card-body .text-link {
     margin-top: auto;
+    align-self: center;
 }
 
 [data-page="pricing"] .cards-grid > .card .btn {
@@ -910,6 +999,7 @@ textarea {
 .filter-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
     margin-bottom: 32px;
 }
